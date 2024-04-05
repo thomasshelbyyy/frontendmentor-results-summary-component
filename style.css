@@ -1,0 +1,215 @@
+:root {
+    /* Primary color */
+    --light-red: 0, 100%, 67%;
+    --orangey-yellow: 39, 100%, 56%;
+    --green-teal: 166, 100%, 37%;
+    --cobalt-blue: 234, 85%, 45%;
+
+    /* Gradients color */
+    /* background */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    /* circle */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral color */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --ligt-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url("./assets/fonts/static/HankenGrotesk-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url("./assets/fonts/static/HankenGrotesk-Medium.ttf");
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "HankenGrotesk";
+    background-color: var(--pale-blue);
+}
+
+.container {
+    width: 600px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+}
+
+.result {
+    padding: 30px;
+    width: 50%;
+    background: linear-gradient(to bottom, var(--light-royal-blue) 0%, var(--light-slate-blue) 50%, var(--light-royal-blue) 100%);
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: var(--ligt-lavender);
+    padding-bottom: 20px;
+}
+
+.circle {
+    background: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+    width: 150px;
+    height: 150px;
+    border-radius: 999px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    font-size: 44px;
+}
+
+.total {
+    color: var(--ligt-lavender);
+}
+
+.grade {
+    padding: 20px 0;
+    font-size: 32px;
+}
+
+.grade-description {
+    text-align: center;
+    color: var(--ligt-lavender);
+    font-size: 16px;
+}
+
+.summary {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 12px;
+}
+
+.summary-title {
+    text-align: left;
+    padding-bottom: 24px;
+    font-size: 20px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.red {
+    background-color: hsla(var(--light-red), 0.1);
+}
+
+.yellow {
+    background-color: hsla(var(--orangey-yellow), 0.1);
+}
+
+.teal {
+    background-color: hsla(var(--green-teal), 0.1);
+}
+
+.blue {
+    background-color: hsla(var(--cobalt-blue), 0.1);
+}
+
+.card-left {
+    display: flex;
+}
+
+.card-left-red {
+    color: hsl(var(--light-red));
+}
+
+.card-left-yellow {
+    color: hsl(var(--orangey-yellow));
+}
+
+.card-left-teal {
+    color: hsl(var(--green-teal));
+}
+
+.card-left-blue {
+    color: hsl(var(--cobalt-blue));
+}
+
+.icon {
+    padding-right: 8px;
+}
+
+.detail-score {
+    color: var(--dark-gray-blue);
+}
+
+.bold {
+    font-weight: 700;
+    color: black;
+}
+
+.btn {
+    margin-top: 40px;
+    color: var(--white);
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--dark-gray-blue);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .result {
+        width: 100%;
+        margin-top: 150px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .summary {
+        width: 100%;
+    }
+}
